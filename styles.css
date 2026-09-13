@@ -27,3 +27,11 @@ header nav.open{display:flex;gap:0;animation:nav-reveal .18s ease-out}header nav
 @media(max-width:360px){.mobile-toggle{min-width:48px;padding:12px}.menu-label{display:none}.logo{max-width:72%}}
 @keyframes nav-reveal{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){header nav.open{animation:none}}
+
+/* Minimal icon-only mobile menu control. */
+@media(max-width:600px){
+.mobile-toggle{width:48px;min-width:48px;height:48px;min-height:48px;padding:0;gap:0;border:1px solid #dde3d7;border-radius:50%;background:#fff;color:#19211d;box-shadow:none;flex-shrink:0}
+.mobile-toggle .menu-label{display:none}.mobile-toggle:hover{background:#edf4e4;border-color:#b7c99f}.mobile-toggle[aria-expanded=true]{background:#19211d;border-color:#19211d;color:#fff}
+.mobile-toggle .menu-glyph{width:20px;height:20px}.mobile-toggle .menu-glyph span{left:0;right:auto;width:20px;height:2px;border-radius:2px}.mobile-toggle .menu-glyph span:first-child{top:6px}.mobile-toggle .menu-glyph span:last-child{top:12px;width:20px}
+.mobile-toggle[aria-expanded=true] .menu-glyph span:first-child{top:9px;transform:rotate(45deg)}.mobile-toggle[aria-expanded=true] .menu-glyph span:last-child{top:9px;width:20px;transform:rotate(-45deg)}
+}
