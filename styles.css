@@ -45,3 +45,11 @@ header nav.open{display:flex;gap:0;animation:nav-reveal .18s ease-out}header nav
 .mobile-toggle[aria-expanded=true] .nav-line-middle{opacity:0}
 .mobile-toggle[aria-expanded=true] .nav-line-bottom{transform:translateY(-6px) rotate(-45deg);transform-origin:12px 18px}
 }
+
+.hero-order-desktop{display:none!important}
+@media(min-width:601px){
+.hero-order-link{background:transparent;color:var(--ink);border:0;border-bottom:1px solid #19211d80;border-radius:0;padding:11px 0;gap:24px;font-size:15px;font-weight:600;box-shadow:none}
+.hero-order-link .hero-order-mobile{display:none}.hero-order-link .hero-order-desktop{display:inline!important}.hero-order-link:hover{transform:none;background:transparent;border-bottom-color:var(--ink)}.hero-order-link .arrow-icon{transition:transform .2s}.hero-order-link:hover .arrow-icon{transform:translate(2px,-2px)}
+}
+
+.hero-order-link .hero-order-mobile,.hero-order-link .hero-order-desktop{font-size:inherit}
