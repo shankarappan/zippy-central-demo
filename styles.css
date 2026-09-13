@@ -53,3 +53,11 @@ header nav.open{display:flex;gap:0;animation:nav-reveal .18s ease-out}header nav
 }
 
 .hero-order-link .hero-order-mobile,.hero-order-link .hero-order-desktop{font-size:inherit}
+
+/* Keep the full category strip readable and aligned on small screens. */
+@media(max-width:600px){
+.ticker{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;column-gap:22px;row-gap:14px;padding:24px 6%;white-space:normal;overflow:visible}
+.ticker>i{display:none}.ticker>span{font-size:19px;line-height:1.25;letter-spacing:.5px;white-space:nowrap;text-align:center;flex:0 0 auto}
+.hero-image{margin-left:0;margin-right:0}.intro{padding-top:44px}
+}
+@media(max-width:360px){.ticker{column-gap:17px;row-gap:12px}.ticker>span{font-size:17px}}
