@@ -2,6 +2,8 @@
 
 A proposed website for Zippy Central Cafe & Bar in Rotorua, using the client-supplied official logo and a complementary green, orange and charcoal palette.
 
+[Open the client demo](https://shankarappan.github.io/zippy-central-demo/)
+
 ## Demo features
 
 - Responsive café homepage, menu highlights, directions and contact links.
