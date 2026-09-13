@@ -35,3 +35,13 @@ header nav.open{display:flex;gap:0;animation:nav-reveal .18s ease-out}header nav
 .mobile-toggle .menu-glyph{width:20px;height:20px}.mobile-toggle .menu-glyph span{left:0;right:auto;width:20px;height:2px;border-radius:2px}.mobile-toggle .menu-glyph span:first-child{top:6px}.mobile-toggle .menu-glyph span:last-child{top:12px;width:20px}
 .mobile-toggle[aria-expanded=true] .menu-glyph span:first-child{top:9px;transform:rotate(45deg)}.mobile-toggle[aria-expanded=true] .menu-glyph span:last-child{top:9px;width:20px;transform:rotate(-45deg)}
 }
+
+/* Standard three-line navigation icon, with a quiet rounded-square target. */
+@media(max-width:600px){
+.mobile-toggle{border:0;border-radius:12px;background:#f1f4ed;width:48px;height:48px;min-width:48px;color:#19211d;box-shadow:none}
+.mobile-toggle:hover{background:#e5eddc}.mobile-toggle[aria-expanded=true]{background:#19211d;color:white}
+.nav-menu-icon{display:block;flex:none}.nav-menu-icon path{transform-origin:12px 12px;transition:transform .2s ease,opacity .15s ease}
+.mobile-toggle[aria-expanded=true] .nav-line-top{transform:translateY(6px) rotate(45deg);transform-origin:12px 6px}
+.mobile-toggle[aria-expanded=true] .nav-line-middle{opacity:0}
+.mobile-toggle[aria-expanded=true] .nav-line-bottom{transform:translateY(-6px) rotate(-45deg);transform-origin:12px 18px}
+}
