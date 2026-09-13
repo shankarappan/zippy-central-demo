@@ -11,3 +11,19 @@ header{height:112px;background:#fff;gap:28px}.logo{width:250px;flex-shrink:0;lin
 /* Follow the sign's silhouette so the original white canvas disappears. */
 .footer-brand img{border-radius:0;clip-path:polygon(0% 20%,.5% 16%,1.5% 12.5%,3% 9.5%,5% 9%,49.15% 9%,50% 5.8%,50.55% 9%,95% 9%,97% 9.5%,98.5% 12.5%,99.5% 16%,100% 20%,100% 82%,99.5% 86%,98.5% 89%,97% 91.5%,95% 92.5%,50.6% 92.5%,50% 94.3%,49.4% 92.5%,5% 92.5%,3% 91.5%,1.5% 89%,.5% 86%,0% 82%)}
 .proposal-banner{padding:18px 22px;background:#fff3dd;border:1px solid #e3c69a;border-radius:12px;font-size:14px;line-height:1.7;margin:0 0 30px}
+
+/* Mobile navigation: branded disclosure control and a spacious floating panel. */
+.arrow-icon{display:inline-block;vertical-align:middle;flex-shrink:0}.button>span,.nav-cta>span,.text-link>span{display:inline-flex;align-items:center}.mobile-order>span{display:inline-flex;align-items:center;gap:8px}.mobile-order .arrow-icon{width:17px;height:17px}
+@media(max-width:600px){
+header{position:relative;z-index:10;height:94px;padding:0 6%;border-bottom:1px solid #dfe5d9;isolation:isolate}
+.mobile-toggle{-webkit-appearance:none;appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-width:88px;min-height:46px;padding:12px 14px;border:1px solid #dce4d5;border-radius:14px;background:#f2f6ec;color:#19211d;font-size:14px;font-weight:600;line-height:1;box-shadow:0 2px 4px #19211d05;transition:background .2s,border-color .2s}
+.mobile-toggle:hover{background:#e8f1dc;border-color:#bfd49f}.mobile-toggle[aria-expanded=true]{background:#19211d;border-color:#19211d;color:white}
+.menu-glyph{display:flex;width:18px;height:18px;position:relative;flex-shrink:0}.menu-glyph span{position:absolute;left:0;width:18px;height:1.5px;border-radius:2px;background:currentColor;transition:transform .2s,top .2s}.menu-glyph span:first-child{top:5px}.menu-glyph span:last-child{top:11px;width:13px;right:0;left:auto}
+.mobile-toggle[aria-expanded=true] .menu-glyph span:first-child{top:8px;transform:rotate(45deg)}.mobile-toggle[aria-expanded=true] .menu-glyph span:last-child{top:8px;width:18px;transform:rotate(-45deg)}
+header nav{position:absolute;top:calc(100% + 10px);left:4%;right:4%;padding:10px 22px;background:#fffefa;border:1px solid #dce4d5;border-radius:18px;box-shadow:0 14px 40px #19211d29;gap:0;max-height:calc(100dvh - 125px);overflow-y:auto}
+header nav.open{display:flex;gap:0;animation:nav-reveal .18s ease-out}header nav a{font-size:17px;font-weight:500;letter-spacing:-.2px;padding:20px 0;border-bottom:1px solid #e6eadf;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}header nav a:last-child{border:0}header nav a:after{content:'';width:7px;height:7px;border-right:1.5px solid #647456;border-top:1.5px solid #647456;transform:rotate(45deg);margin-right:4px}header nav a:hover{color:#386b1d}header nav a:focus-visible{outline-offset:1px;border-radius:4px}
+.logo{max-width:64%;width:215px}.mobile-order{bottom:max(12px,env(safe-area-inset-bottom))}.roundel span{letter-spacing:.2px}
+}
+@media(max-width:360px){.mobile-toggle{min-width:48px;padding:12px}.menu-label{display:none}.logo{max-width:72%}}
+@keyframes nav-reveal{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){header nav.open{animation:none}}
